@@ -5,7 +5,7 @@
     }
     
     body {
-        font-family: Helvetica;
+        font-family: Roboto , sans-serif;
     background-color: #fffefe;
         margin: 0;
         padding: 0;
@@ -160,7 +160,7 @@ input:checked+.slider:before {
     height: 4px;
   }
   .goods1,.goods2{
-    box-shadow:0px 0px 10px #000;
+    box-shadow:0px 0px 5px #000;
     flex: 1;
     padding: 2vw;
     align-items: center;
@@ -200,8 +200,8 @@ font-size: 30px;
 font-weight: 700;
 }
 .hwork{
-    font-weight: 700;
-    font-size:clamp(30px,3vw,40px);
+    font-weight: 600;
+    font-size:clamp(20px,3vw,35px);
 }
 .register:active{
     background-color: #fff;
@@ -288,7 +288,47 @@ font-weight: 700;
 .plahka{
     background-color: #fbfcff;
     width: 100%;
+    padding: clamp(10px,2vw, 20px);
+    margin: 10px 0;
 }
+.sect2{
+margin-top: 100px;
+}
+
 .hsect2{
     text-align: center;
+    
+}
+.hplans , .hsect2, .sect3-textblock{
+    font-family: Poppins ;
+    font-weight: 300;
+    font-size: clamp(20px, 3vw, 35px);
+}
+.btnfree, .login, .register, .sect3-button{
+    font-weight: 600;
+}
+.sect3{
+margin-top: 100px;
+background-color: #f2faff;
+padding: 50px 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+   
+}
+
+.green{
+    color: #00b289;
+}
+.sect3-button{
+background-color: #00b289;
+color:#fff;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+height: clamp(60px, 5vw, 80px);
+width: clamp(200px, 10vw, 400px);
+}
+.Plearn{
+font-weight: 600;
 }
