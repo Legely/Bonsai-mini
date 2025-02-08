@@ -279,6 +279,26 @@ font-weight: 700;
     main{
         margin: 10px 50px;
     }
+    .sect3 {
+        flex-direction: column; /* Устанавливаем вертикальное расположение элементов */
+        align-items: center; /* Выравниваем элементы по центру */
+      }
+  
+      .sect3-button {
+        display: block; /* Кнопка будет блочной */
+        width: 100%; /* Кнопка будет растягиваться на всю ширину */
+        margin-top: 20px; /* Добавляем отступ сверху */
+      }
+      .footer-links-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footer-links-column {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
     
 }
 .menu-dropdown a:hover{
@@ -332,3 +352,81 @@ width: clamp(200px, 10vw, 400px);
 .Plearn{
 font-weight: 600;
 }
+
+.question {
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease; /* Плавное изменение направления стрелки */
+  }
+  
+  .answer {
+    display: none; /* Ответы скрыты по умолчанию */
+    padding: 10px;
+    background-color: #f2faff;
+    margin-bottom: 10px;
+  }
+  .htext-sect4{
+text-align: center;
+font-weight: 600;
+font-size: clamp(20px, 3vw, 35px);
+
+  }
+  .sect4{
+    margin-top: 100px;
+  }
+
+  /* Основной стиль футера */
+.footer {
+    background-color: #f2faff;
+
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Для адаптивности */
+    margin-bottom: 30px;
+  }
+  
+  .footer-links-column {
+    flex: 1;
+    padding: 0 20px;
+    min-width: 220px; /* Минимальная ширина для каждого столбца */
+  }
+  
+  .footer-links-column h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .footer-links-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links-column li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links-column li a {
+    text-decoration: none;
+    color: #00bfae;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links-column li a:hover {
+    color: #007b6e; /* Цвет при наведении */
+  }
