@@ -1,0 +1,294 @@
+
+    
+    * {
+        box-sizing: border-box; /* Чтобы padding не ломал ширину */
+    }
+    
+    body {
+        font-family: Helvetica;
+    background-color: #fffefe;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden; /* Чтобы не было горизонтального скролла */
+    }
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* Выравнивание элементов по вертикали */
+    gap: 10px;
+    /* Расстояние между элементами */
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.dropdown button,
+.txt-btn button {
+    background-color: transparent;
+    border: none;
+    margin: 0px 10px;
+}
+
+.login,
+.register {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #00b289;
+}
+
+.login {
+    color: #00b289;
+    background-color: #fff;
+}
+
+.register {
+    background-color: #00b289;
+    color: #fff;
+}
+
+.mainh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+main{
+    margin: 10px 100px;
+    padding-top: 100px;
+}
+/* Настройки тумбера и текста*/
+.artmenu {
+    display: flex; /* Включаем flexbox */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    justify-content: space-between; /* Распределяем элементы равномерно */
+    gap:5px;
+    font-weight: 600;
+}
+
+/* Настройки стиля тумбера */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 26px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #00b289;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #00b289;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(19px);
+    -ms-transform: translateX(19px);
+    transform: translateX(19px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+.goods{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(40px,4vw,100px);
+    flex-wrap: wrap;
+}
+.divider {
+    background-color: #00b289;
+    border: 0;
+    margin: 2px 0;
+    height: 4px;
+  }
+  .goods1,.goods2{
+    box-shadow:0px 0px 10px #000;
+    flex: 1;
+    padding: 2vw;
+    align-items: center;
+    background-color: #fbfcff;
+    min-width: 250px;
+    width: auto;
+    max-width: 450px;
+    height: clamp(400px ,auto , 700px);
+    font-size: clamp(14px,2vw,24px);
+  }
+  .goods1>ul,.goods2>ul{
+    list-style-type: none;
+    padding: 10px 0;
+  }
+  .goods1>ul>li,.goods2>ul>li{
+    
+    padding: 5px 0;
+  }
+  ul.no-bullets li::before {
+     content: '\2713\0020';
+     color : #00b289;
+     
+}
+.no-bullets{
+    padding-left: 0;
+}
+.btnfree{
+    background-color: #00b289;
+    color:#fff;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: clamp(10px, 1vw, 20px);
+}
+.bmon{
+font-size: 30px;
+font-weight: 700;
+}
+.hwork{
+    font-weight: 700;
+    font-size:clamp(30px,3vw,40px);
+}
+.register:active{
+    background-color: #fff;
+    color: #00b289;
+}
+.login:active{
+    background-color: #00b289;
+    color: #fff;
+}
+
+/* Кнопка-гамбургер */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+/* Кнопка-бургер (по умолчанию скрыта) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Выпадающее меню (по умолчанию скрыто) */
+.menu-dropdown {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-dropdown a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    display: block;
+}
+
+/* Кнопка закрытия меню */
+.close-menu {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+/* АДАПТИВНОСТЬ: скрываем меню и показываем бургер при ширине < 768px */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    .goods1,.goods2{
+        
+        flex-direction: column;
+    }
+    main{
+        margin: 10px 50px;
+    }
+    
+}
+.menu-dropdown a:hover{
+    background-color: #00b289;
+}
+
+.plahka{
+    background-color: #fbfcff;
+    width: 100%;
+}
+.hsect2{
+    text-align: center;
+}
